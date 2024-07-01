@@ -27,7 +27,6 @@ let package = Package(
             dependencies: [],
             swiftSettings: [
                 .warnLongExpressionTypeChecking(),
-                .enableUpcomingFeature("DisableOutwardActorInference"),
             ]
         ),
         .testTarget(
