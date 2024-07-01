@@ -1,4 +1,4 @@
-// swift-tools-version:5.10
+// swift-tools-version:6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -26,7 +26,6 @@ let package = Package(
             name: "JSONPatch",
             dependencies: [],
             swiftSettings: [
-                .concurrencyChecking(),
                 .warnLongExpressionTypeChecking(),
                 .enableUpcomingFeature("DisableOutwardActorInference"),
             ]
@@ -45,7 +44,7 @@ let package = Package(
             ]
         )
     ],
-    swiftLanguageVersions: [.v5]
+    swiftLanguageVersions: [.v6]
 )
 
 extension SwiftSetting {
@@ -61,15 +60,5 @@ extension SwiftSetting {
             ],
             .when(configuration: configuration)
         )
-    }
-
-    enum ConcurrencyChecking: String {
-        case complete
-        case minimal
-        case targeted
-    }
-
-    static func concurrencyChecking(_ setting: ConcurrencyChecking = .complete) -> Self {
-        .enableExperimentalFeature("StrictConcurrency=\(setting)")
     }
 }

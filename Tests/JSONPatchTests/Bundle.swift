@@ -21,5 +21,5 @@
 import Foundation
 
 extension Bundle {
-    static let test = Bundle(identifier: "scot.raymccrae.JSONPatchTests")!
+    static let test = Bundle.module
 }
