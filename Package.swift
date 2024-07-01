@@ -36,12 +36,7 @@ let package = Package(
             dependencies: ["JSONPatch"],
             path: "Tests",
             resources: [
-                .process("JSONPatchTests/bigexample1.json"),
-                .process("JSONPatchTests/bigexample2.json"),
-                .process("JSONPatchTests/bigpatch.json"),
-                .process("JSONPatchTests/extra.json"),
-                .process("JSONPatchTests/spec_tests.json"),
-                .process("JSONPatchTests/tests.json")
+                .process("JSONPatchTests/Resources"),
             ]
         )
     ],
