@@ -433,14 +433,18 @@ extension JSONElement {
         do {
             let found = try evaluate(pointer: pointer)
             if found != value {
-                throw JSONError.patchTestFailed(path: pointer.string,
-                                                expected: value.rawValue,
-                                                found: found.rawValue)
+                throw JSONError.patchTestFailed(
+                    path: pointer.string,
+                    expected: String(describing: value.rawValue),
+                    found: String(describing: found.rawValue)
+                )
             }
         } catch {
-            throw JSONError.patchTestFailed(path: pointer.string,
-                                            expected: value.rawValue,
-                                            found: nil)
+            throw JSONError.patchTestFailed(
+                path: pointer.string,
+                expected: String(describing: value.rawValue),
+                found: nil
+            )
         }
     }
 

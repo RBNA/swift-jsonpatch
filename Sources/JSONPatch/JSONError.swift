@@ -27,7 +27,7 @@ public enum JSONError: Error {
     case referencesNonexistentValue
     case unknownPatchOperation
     case missingRequiredPatchField(op: String, index: Int, field: String)
-    case patchTestFailed(path: String, expected: Any, found: Any?)
+    case patchTestFailed(path: String, expected: String, found: String?)
 }
 
 extension JSONError: Equatable {
