@@ -26,7 +26,7 @@ let package = Package(
             name: "JSONPatch",
             dependencies: [],
             swiftSettings: [
-                .warnLongExpressionTypeChecking(),
+//                .warnLongExpressionTypeChecking(),
             ]
         ),
         .testTarget(

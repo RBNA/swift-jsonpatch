@@ -27,7 +27,7 @@ let package = Package(
             dependencies: [],
             swiftSettings: [
                 .concurrencyChecking(),
-                .warnLongExpressionTypeChecking(),
+//                .warnLongExpressionTypeChecking(),
                 .enableUpcomingFeature("DisableOutwardActorInference"),
             ]
         ),
